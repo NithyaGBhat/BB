@@ -7,16 +7,8 @@ target.var.name <- "diabetes"
 
 #############################################
 names(data)[names(data)==target.var.name] <- "DV"
-ncol(data)
-
-library(dplyr)
 final_dataset <- inner_join(data, filename, by = NULL, copy = FALSE)
 final_dataset$DV <- NULL
-class(final_dataset)
-nrow(data)
-ncol(final_dataset)
-ncol(data)
-colnames(final_dataset)
 
 write.csv(data,"C:/opencpuapp_ip/f_dv.csv")
 write.csv(final_dataset,"C:/opencpuapp_ip/f_out.csv")
