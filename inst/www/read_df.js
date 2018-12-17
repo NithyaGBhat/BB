@@ -25,7 +25,7 @@ $(document).ready(function(){
   }    
   
   function uploadcsv2(filename){
-	 alert("inside uploadcsv....");
+	 //alert("inside uploadcsv....");
     //disable the button during upload
     $("#submitbutton2").attr("disabled", "disabled");  
     //perform the request
@@ -34,6 +34,7 @@ $(document).ready(function(){
     }, function(session){
 		$("#status2").text("Wait till I Upload");
       //on success call printsummary()
+	alert("inside uploadcsv....");
       printsummary(session);
     });
     
