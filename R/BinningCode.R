@@ -7,9 +7,9 @@ target.var.name <- "diabetes"
 
 #############################################
 install.packages("dplyr",repos = "http://cran.us.r-project.org")
-library(dplyr)
+#library(dplyr)
 names(data)[names(data)==target.var.name] <- "DV"
-final_dataset <- inner_join(data, filename, by = NULL, copy = FALSE)
+final_dataset <- dplyr::inner_join(data, filename, by = NULL, copy = FALSE)
 final_dataset$DV <- NULL
 
 write.csv(data,"C:/opencpuapp_ip/f_dv.csv")
