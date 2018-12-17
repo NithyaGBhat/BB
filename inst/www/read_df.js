@@ -27,12 +27,12 @@ $(document).ready(function(){
   function uploadcsv2(filename){
 	 //alert("inside uploadcsv....");
     //disable the button during upload
-    $("#submitbutton").attr("disabled", "disabled");  
+    $("#submitbutton2").attr("disabled", "disabled");  
     //perform the request
     var req = ocpu.call("BinningCode", {
       file : filename
     }, function(session){
-		$("#status1").text("Wait till I Upload");
+		$("#status2").text("Wait till I Upload");
       //on success call printsummary()
       printsummary(session);
     });
@@ -218,7 +218,7 @@ $(document).ready(function(){
 	
 	
 	
-	$("#status1").text("Reading the CSV...");	
+	$("#status2").text("Reading the CSV...");	
   
 	uploadcsv2(filename); 
   });
