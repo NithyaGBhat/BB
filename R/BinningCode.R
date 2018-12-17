@@ -6,7 +6,7 @@ target.var.name <- "diabetes"
 
 
 #############################################
-install.packages("dplyr")
+install.packages("dplyr",repos = "http://cran.us.r-project.org")
 library(dplyr)
 names(data)[names(data)==target.var.name] <- "DV"
 final_dataset <- inner_join(data, filename, by = NULL, copy = FALSE)
