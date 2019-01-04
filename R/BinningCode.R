@@ -1,16 +1,16 @@
 BinningCode <- function(filename) {
 #data_nDV<-read.csv("C:/opencpuapp_ip/cleaned_data_without_DV.csv",stringsAsFactors = FALSE)
-data<-read.csv("C:/opencpuapp_ip/data_after_binning.csv",stringsAsFactors = FALSE)
-input.df <- data
+r_data<-read.csv("C:/opencpuapp_ip/data_after_binning.csv",stringsAsFactors = FALSE)
+input.df <- r_data
 target.var.name <- "diabetes"
 
 
 #############################################
 install.packages("dplyr",repos = "http://cran.us.r-project.org")
 #library(dplyr)
-names(data)[names(data)==target.var.name] <- "DV"
+names(r_data)[names(r_data)==target.var.name] <- "DV"
 data_nDV<-data.frame(filename)
-final_dataset <- dplyr::inner_join(data, data_nDV, by = NULL, copy = FALSE)
+final_dataset <- dplyr::inner_join(r_data, data_nDV, by = NULL, copy = FALSE)
 final_dataset$DV <- NULL
 
 write.csv(data,"C:/opencpuapp_ip/f_dv.csv")
