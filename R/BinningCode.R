@@ -9,6 +9,7 @@ target.var.name <- "diabetes"
 install.packages("dplyr",repos = "http://cran.us.r-project.org")
 #library(dplyr)
 names(data)[names(data)==target.var.name] <- "DV"
+data_nDV<-data.frame(data_nDV)
 final_dataset <- dplyr::inner_join(data, filename, by = NULL, copy = FALSE)
 final_dataset$DV <- NULL
 
