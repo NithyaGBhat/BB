@@ -10,6 +10,8 @@ install.packages("dplyr",repos = "http://cran.us.r-project.org")
 #library(dplyr)
 names(r_data)[names(r_data)==target.var.name] <- "DV"
 data_nDV<-data.frame(filename)
+names(data_nDV)[names(data_nDV)==target.var.name] <- "DV"
+  
 final_dataset <- dplyr::inner_join(r_data, data_nDV, by = NULL, copy = FALSE)
 final_dataset$DV <- NULL
 
