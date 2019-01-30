@@ -1,4 +1,6 @@
 BinningCode <- function(filename) {
+library(dplyr)
+  
 #data_nDV<-read.csv("C:/opencpuapp_ip/cleaned_data_without_DV.csv",stringsAsFactors = FALSE)
 data<-read.csv("C:/opencpuapp_ip/data_after_binning.csv",stringsAsFactors = FALSE)
 input.df <- data
