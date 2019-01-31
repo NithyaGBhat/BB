@@ -7,7 +7,7 @@ input.df <- data
 target.var.name <- "diabetes"
 
 #############################################
-#names(data)[names(data)==target.var.name] <- "DV"
+names(data)[names(data)==target.var.name] <- "DV"
 
 data_nDV<-data.frame(filename)
 final_dataset <- dplyr::inner_join(data, data_nDV, by = NULL, copy = FALSE)
