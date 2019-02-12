@@ -12,7 +12,7 @@ names(data)[names(data)==target.var.name] <- "DV"
 data_nDV<-data.frame(filename)
 final_dataset <- dplyr::inner_join(data, data_nDV,copy = FALSE)
 final_dataset$DV <- NULL
-class(final_dataset)
+#class(final_dataset)
 
 write.csv(data,"C:/opencpuapp_ip/f_dv.csv")
 write.csv(final_dataset,"C:/opencpuapp_ip/f_out.csv")
