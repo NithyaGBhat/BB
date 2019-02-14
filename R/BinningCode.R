@@ -28,7 +28,13 @@ final_dataset$DV <- NULL
 
 write.csv(data,"C:/opencpuapp_ip/f_dv.csv")
 write.csv(final_dataset,"C:/opencpuapp_ip/f_out.csv")
-final_dataset
+#loading model  
+the_model<-load("C:/opencpuapp_ip/lr_model.RData")
+  
+  
+  final_dataset$pred <- predict(get(the_model), newdata=final_dataset, type='response')
+  write.csv(final_dataset,"C:/opencpuapp_ip/Scored_out.csv")
+  final_dataset
 }
 
 #data_nDV<-read.csv("C:/opencpuapp_ip/cleaned_data_without_DV.csv",stringsAsFactors = FALSE)
